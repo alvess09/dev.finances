@@ -16,6 +16,7 @@
         <img src="./assets/logo.svg" alt="Logo Dev Finance">
     </header>
 
+    <!-- insert cards -->
     <main class="container">
         <section id="balance">
             <h2 class="sr-only" >Balanço</h2>
@@ -25,21 +26,21 @@
                     <span>Entradas</span>
                     <img src="./assets/income.svg" alt="Imagem de entradas">    
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay">R$ 5.000,00</p>
             </div>
             <div class="card">
                 <h3>
                     <span>Saídas</span>
                     <img src="./assets/expense.svg" alt="Imagem de entradas">    
                 </h3>
-                <p>R$ 2.000,00</p>
+                <p id="expanseDisplay">R$ 2.000,00</p>
             </div>
             <div class="card total">
                 <h3>
                     <span>Total</span>
                     <img src="./assets/total.svg" alt="Imagem de entradas">    
                 </h3>
-                <p>R$ 3.000,00</p>
+                <p id="totalDisplay">R$ 3.000,00</p>
             </div>        
         </section>
 
@@ -47,7 +48,8 @@
 
             <h2 class="sr-only">Transações</h2>
             <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
-            
+           
+            <!-- insert data table -->
             <table id="data-table">
 
                 <thead>
@@ -59,32 +61,12 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação Web Site</td>
-                        <td class="income">R$ 5.000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$ 200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação">
-                        </td>
-                    </tr>
-
+                <tbody> 
                 </tbody>
             </table>
         </section>
     </main>
+
     <!-- insert modal -->
     <div class="modal-overlay ">
         <div class="modal">
@@ -114,6 +96,8 @@
                         />
                         <small class="help">Use o sinal -(negativo) para despesas e , (vírgula) para casas decimais</small>
                     </div>
+
+
                     <div class="input-group">
                         <label  class="sr-only" for="date">
                             Data
@@ -135,26 +119,12 @@
             </div>
         </div>
     </div>
+    <!-- insert footer  -->
     <footer>
         <h3>dev.finance$</h3>
     </footer>
     
-    <script>
-       const Modal = {
-           open(){
-               //open modal and add class active in modal
-               document
-               .querySelector('.modal-overlay')
-               .classList.add('active')
-           },
-           close(){
-               //close modal, remove active modal
-               document
-               .querySelector('.modal-overlay')
-               .classList.remove('active')
-           }
-       } 
-
+    <script src="./scripts.js">
     </script>
 </body>
 
